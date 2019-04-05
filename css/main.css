@@ -1,0 +1,16 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-graduation-cap {font-size:150px}
+.fa-university {font-size:125px}
+.fa-book {font-size:100px}
+
+div.egc-navbar {background: linear-gradient(180deg, #ebebeb, #afafaf);}
+img.egc-navbar {border-radius: 50%; height: 48px;}
+a.egc-navbar-mail-padding {height: 64px;}
+a.egc-navbar-email {background: linear-gradient(0deg,#434343,#000000);}
+a.egc-navbar-email:hover {background: linear-gradient(180deg, #ebebeb, #afafaf);}
+
+
+
+header.egc-start {background: linear-gradient(145deg, #00c1da, #003bca);}
+div.egc-2nd-grid {background: linear-gradient(345deg, #8E2DE2, #4A00E0);}

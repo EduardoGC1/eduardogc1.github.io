@@ -1,14 +1,134 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Eduardo Gasparino Cardoso</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
-</head>
+<html lang="en">
+<title>Eduardo Gasparino Cardoso</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="shortcut icon" href="imagens/ba_zumbi.png" />
+<link rel="stylesheet" href="css/main.css">
+
+<script>
+    function copiarEmail() {
+    /* Get the text field */
+      var copyText = document.getElementById("egcEmail");
+
+    /* Select the text field */
+    copyText.select();
+
+    /* Copy the text inside the text field */
+    copyText.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+    } 
+</script>
+
 <body>
-    <h1>Hello, World!</h1>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-left-align w3-large egc-navbar">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-white"><img class="egc-navbar" src="imagens/ba_zumbi.png">Eduardo Gasparino Cardoso</a>
+    <a href="#contato" class="w3-bar-item w3-button w3-padding-16 w3-hide-small w3-hover-white egc-navbar-mail-padding egc-navbar-email w3-text-sand" onclick="copiarEmail()">CONTATO</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">eduardo.gcardoso1@gmail.com</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a> -->
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center egc-start" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">BEM VINDO!</h1>
+  <p class="w3-xlarge">Me conheça um pouco melhor</p>
+  <a href="https://github.com/eduardogc1" target="_blank"><button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Veja meu GitHub</button></a>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+      <div class="w3-third w3-center">
+          <i class="fa fa-graduation-cap w3-padding-64 w3-text-indigo"></i>
+      </div>
+
+      <div class="w3-twothird">
+        <h2>Análise e Desenvolvimento de Sistemas</h2>
+        <h3><i>Fatec São Caetano do Sul - Antonio Russo</i></h3>
+        <h5 class="w3-padding-32">Durante a faculdade aprendi sobre engenharia de software, e acabei tendo melhores resultados em disciplinas como linguagem de programação, estrutura de dados, programação orientada a objetos e banco de dados.</h5>
+
+        <p class="w3-text-grey">Conhecimentos adquiridos durante o curso da faculdade: C, Java, VBA(macro em Excel), SQL, arquitetura MVC(Model View Controller), Paradigma POO(Programação Orientada a Objetos), comandos de bash do Sistema Operacional Linux.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container egc-2nd-grid">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-university w3-padding-64 w3-text-deep-orange w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird w3-text-sand">
+      <h4>Sistema de reservas de laboratório(protótipo) - duração 3 meses.</h4>
+      <h5 class="w3-padding-32">Durante o estágio prestado para a faculdade, aprimorei meus conhecimentos em HTML, CSS e JavaScript, aprendi sobre as frameworks AngularJS e Bootstrap, linguagem PHP, banco de dados MySQL e usamos Git para versionamento. Este projeto teve por objetivo permitir que a administração da instituição consiga organizar as reservas dos laboratórios de informática.</h5>
+
+      <p class="w3-text-light-blue">Tecnologias utilizadas: <i class="fab fa-html5"> HTML5</i>; <i class="fab fa-css3"> CSS3</i>; <i class="fab fa-js"> JavaScript</i>; <i class="fab fa-bootstrap"> Bootstrap</i>; <i class="fab fa-angular"> AngularJS</i>; <i class="fab fa-php"> PHP</i>; <i class="fas fa-database"> MySQL</i>; <i class="fab fa-git"> Git(pelo BitBucket).</i></p>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-light-sand w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-book w3-padding-64 w3-text-blue-grey w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h4>Rede geossocial(protótipo) - duração 4 meses.</h4>
+      <h5 class="w3-padding-32">Enquanto no desenvolvimento do Trabalho de Conclusão de Curso acabei aprendendo mais sobre AngularJS e Bootstrap, sevidor Node.js, banco de dados NoSQL: MongoDB, um pouco da API do GoogleMaps e também usamos Git para controle de versões. Este projeto teve por objetivo permitir que usuários postassem mensagens em pontos no mapa utilizando google maps.</h5>
+
+      <p class="w3-text-grey">Tecnologias utilizadas: <i class="fab fa-html5"> HTML5</i>; <i class="fab fa-css3"> CSS3</i>; <i class="fab fa-js"> JavaScript</i>; <i class="fab fa-bootstrap"> Bootstrap</i>; <i class="fab fa-angular"> AngularJS</i>; <i class="fab fa-node"> Node.js</i>; <i class="fas fa-database"> MongoDB</i>; <i class="fab fa-git"> Git(pelo BitBucket).</i></p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div> -->
+
+<!-- Footer -->
+<footer id="contato" class="w3-container w3-center w3-opacity w3-dark-grey">  
+  <div class="w3-xlarge w3-padding-32">
+    <h3>CONTATO</h3>
+    <p><i class="fas fa-envelope"></i> eduardo.gcardoso1@gmail.com</p>
+ </div>
+ <p>Template - Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
 </body>
 </html>
