@@ -4,6 +4,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-university {font-size:125px}
 .fa-book {font-size:100px}
 
+
 div.egc-navbar {background: linear-gradient(180deg, #ebebeb, #afafaf);}
 img.egc-navbar {border-radius: 50%; height: 48px;}
 a.egc-navbar-mail-padding {height: 64px;}
@@ -11,6 +12,30 @@ a.egc-navbar-email {background: linear-gradient(0deg,#434343,#000000);}
 a.egc-navbar-email:hover {background: linear-gradient(180deg, #ebebeb, #afafaf);}
 
 
-
 header.egc-start {background: linear-gradient(145deg, #00c1da, #003bca);}
 div.egc-2nd-grid {background: linear-gradient(345deg, #8E2DE2, #4A00E0);}
+
+
+span.tooltiptext {
+    font-size: 14px;
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+
+    /* Show at the bottom */
+    width: 150px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+button.tooltip span.tooltiptext {
+    visibility: visible;
+}

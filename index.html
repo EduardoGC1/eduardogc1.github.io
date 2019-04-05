@@ -6,25 +6,37 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="shortcut icon" href="imagens/ba_zumbi.png" />
 <link rel="stylesheet" href="css/main.css">
 
 <script>
-    function copiarEmail() {
-    /* Get the text field */
-      var copyText = document.getElementById("egcEmail");
+  function copiarEmail() {
+    // Mostra o texto que realmente vai ser copiado
+    document.getElementById("egcEmail").removeAttribute("class"); 
 
-    /* Select the text field */
-    copyText.select();
+    // Copia o texto
+    var range = document.createRange();
+    range.selectNode(document.getElementById("egcEmail"));
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
 
-    /* Copy the text inside the text field */
-    copyText.execCommand("copy");
+    // Re-esconde o texto que foi realmente copiado
+    document.getElementById("egcEmail").setAttribute("class", "w3-hide");
 
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
-    } 
+    // Mostra o tooltip
+    var botaoEmail = document.getElementById("botaoEmail"); // Pega o button#botaoEmail
+    var delTooltip = botaoEmail.attributes.class.nodeValue; // Salva as classes antes de adicionar a classe 'tooltip'
+    var addTooltip = botaoEmail.attributes.class.nodeValue + " tooltip"; // Adiciona a classe 'tooltip'
+    botaoEmail.setAttribute("class", addTooltip); 
+
+    // Remove o tooltip depois de um tempo
+    setTimeout(function() {
+      botaoEmail.setAttribute("class", delTooltip); // Muda de volta para o estado antes do 'tooltip' após 1.5 segundo
+    }, 1500);
+  }
 </script>
 
 <body>
@@ -32,21 +44,9 @@
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-left-align w3-large egc-navbar">
-    <!-- <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a> -->
     <a href="#" class="w3-bar-item w3-button w3-white"><img class="egc-navbar" src="imagens/ba_zumbi.png">Eduardo Gasparino Cardoso</a>
-    <a href="#contato" class="w3-bar-item w3-button w3-padding-16 w3-hide-small w3-hover-white egc-navbar-mail-padding egc-navbar-email w3-text-sand" onclick="copiarEmail()">CONTATO</a>
-    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+    <a href="#contato" class="w3-bar-item w3-button w3-padding-16 w3-hide-small w3-hover-white egc-navbar-mail-padding egc-navbar-email w3-text-sand">CONTATO</a>
   </div>
-
-  <!-- Navbar on small screens -->
-  <!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">eduardo.gcardoso1@gmail.com</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
-  </div> -->
 </div>
 
 <!-- Header -->
@@ -100,35 +100,35 @@
       <h4>Rede geossocial(protótipo) - duração 4 meses.</h4>
       <h5 class="w3-padding-32">Enquanto no desenvolvimento do Trabalho de Conclusão de Curso acabei aprendendo mais sobre AngularJS e Bootstrap, sevidor Node.js, banco de dados NoSQL: MongoDB, um pouco da API do GoogleMaps e também usamos Git para controle de versões. Este projeto teve por objetivo permitir que usuários postassem mensagens em pontos no mapa utilizando google maps.</h5>
 
-      <p class="w3-text-grey">Tecnologias utilizadas: <i class="fab fa-html5"> HTML5</i>; <i class="fab fa-css3"> CSS3</i>; <i class="fab fa-js"> JavaScript</i>; <i class="fab fa-bootstrap"> Bootstrap</i>; <i class="fab fa-angular"> AngularJS</i>; <i class="fab fa-node"> Node.js</i>; <i class="fas fa-database"> MongoDB</i>; <i class="fab fa-git"> Git(pelo BitBucket).</i></p>
+      <p class="w3-text-grey">Tecnologias utilizadas: <i class="fab fa-html5"> HTML5</i>; <i class="fab fa-css3"> CSS3</i>; <i class="fab fa-js"> JavaScript</i>; <i class="fab fa-bootstrap"> Bootstrap</i>; <i class="fab fa-angular"> AngularJS</i>; <i class="fab fa-node"> Node.js</i>; <i class="fas fa-database"> MongoDB</i>; <i class="fas fa-map-marked-alt"> GoogleMapsAPI</i>; <i class="fab fa-git"> Git(pelo BitBucket).</i></p>
     </div>
   </div>
 </div>
-
-<!-- <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
-</div> -->
 
 <!-- Footer -->
 <footer id="contato" class="w3-container w3-center w3-opacity w3-dark-grey">  
   <div class="w3-xlarge w3-padding-32">
     <h3>CONTATO</h3>
-    <p><i class="fas fa-envelope"></i> eduardo.gcardoso1@gmail.com</p>
- </div>
- <p>Template - Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+    <p><div class="w3-display-container"> 
+      <i class="fas fa-envelope"></i> 
+
+      <button id="botaoEmail" onclick="copiarEmail()" class="w3-button w3-round-xlarge w3-black">
+
+        <span>eduardo.gcardoso1@gmail.com</span>
+        
+        <!-- TOOLTIP -->
+        <span class="tooltiptext">E-MAIL COPIADO!</span> 
+
+        <i class="fas fa-clipboard"></i>
+      </button>
+
+    </div></p>
+  </div>
+  <p>Template - Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
+<!-- Email para copiar -->
+<text id="egcEmail" class="w3-hide">eduardo.gcardoso1@gmail.com</text> 
 </body>
 </html>
