@@ -15,6 +15,9 @@ a.egc-navbar-email:hover {background: linear-gradient(180deg, #ebebeb, #afafaf);
 header.egc-start {background: linear-gradient(145deg, #00c1da, #003bca);}
 div.egc-2nd-grid {background: linear-gradient(345deg, #8E2DE2, #4A00E0);}
 
+button#botaoEmail {
+    font-size: 18px;
+}
 
 span.tooltiptext {
     font-size: 14px;
